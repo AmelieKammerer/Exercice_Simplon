@@ -10,6 +10,6 @@ Créer une calculatrice faisant l'addition et la soustraction de deux nombres
 # Fonctionnement du programme
 - L'utilisateur saisi son calcul dans un champ dédié
 - La string saisie est analysée afin de vérifier qu'elle ne contient que des chiffres, virgules, points, signe "+" ou signe "-". Dans le cas contraire, un message d'erreur est envoyé et le champ vidé.
-- On vérifie si deux caractères spéciaux identiques se suivent (++; ..) ou que la string se termine par un caractère spécial. Si c'est le cas on envoie un message d'erreur et on efface le contenu du champ.
+- On vérifie si deux caractères spéciaux identiques se suivent (++; ..) ou que la string commence ou se termine par un caractère spécial. Si c'est le cas on envoie un message d'erreur et on efface le contenu du champ.
 - On sépare ensuite les chiffres des signes et on les stocke séparément
 - Enfin on calcule en utilisant les chiffres et signes stockés puis on met à jour le champ de saisie en y mettant le résultat trouvé.
