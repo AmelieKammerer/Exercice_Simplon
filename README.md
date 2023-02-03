@@ -11,8 +11,8 @@ Créer une calculatrice faisant l'addition et la soustraction de deux nombres
 # Comment j'ai programmé cette calculatrice
 - J'ai appris à utiliser l'outil GitHub
 - J'ai choisi de programmer la calculatrice en python. Ne sachant pas coder en objet j'ai cherché comment on code en objet sous python.
-- Pour interragir avec l'utilisateur j'ai choisi d'utiliser tkinter.
-- Le traitement du texte saisi dans la fenêtre tkinter et le calcul associé pouvant tenir dans une fonction, je n'ai pas vu d'intéret à créer ce programme avec des class.
+- Pour interragir avec l'utilisateur j'ai choisi d'utiliser PyQt5.
+- La création de la fenêtre est gérée dans une class.
 
 # Fonctionnement du programme
 - L'utilisateur saisi son calcul dans un champ dédié
