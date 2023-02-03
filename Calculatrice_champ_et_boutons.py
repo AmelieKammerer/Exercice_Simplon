@@ -113,46 +113,57 @@ class Calculatrice(QDialog):
 
     # Initialise les actions que les boutons doivent réaliser quand on clique dessus    
     def button0_clicked(self):
+        self.user_entry = self.calcul_entry.text()
         self.user_entry = self.user_entry + "0"
         self.calcul_entry.setText(self.user_entry)
 
     def button1_clicked(self):
+        self.user_entry = self.calcul_entry.text()
         self.user_entry = self.user_entry + "1"
         self.calcul_entry.setText(self.user_entry)
 
     def button2_clicked(self):
+        self.user_entry = self.calcul_entry.text()
         self.user_entry = self.user_entry + "2"
         self.calcul_entry.setText(self.user_entry)
 
     def button3_clicked(self):
+        self.user_entry = self.calcul_entry.text()
         self.user_entry = self.user_entry + "3"
         self.calcul_entry.setText(self.user_entry)
 
     def button4_clicked(self):
+        self.user_entry = self.calcul_entry.text()
         self.user_entry = self.user_entry + "4"
         self.calcul_entry.setText(self.user_entry)
 
     def button5_clicked(self):
+        self.user_entry = self.calcul_entry.text()
         self.user_entry = self.user_entry + "5"
         self.calcul_entry.setText(self.user_entry)
 
     def button6_clicked(self):
+        self.user_entry = self.calcul_entry.text()
         self.user_entry = self.user_entry + "6"
         self.calcul_entry.setText(self.user_entry)
 
     def button7_clicked(self):
+        self.user_entry = self.calcul_entry.text()
         self.user_entry = self.user_entry + "7"
         self.calcul_entry.setText(self.user_entry)
 
     def button8_clicked(self):
+        self.user_entry = self.calcul_entry.text()
         self.user_entry = self.user_entry + "8"
         self.calcul_entry.setText(self.user_entry)
 
     def button9_clicked(self):
+        self.user_entry = self.calcul_entry.text()
         self.user_entry = self.user_entry + "9"
         self.calcul_entry.setText(self.user_entry)
 
     def buttonadd_clicked(self):
+        self.user_entry = self.calcul_entry.text()
         if self.user_entry == "":
             self.user_entry = "0" + "+"
 
@@ -165,6 +176,7 @@ class Calculatrice(QDialog):
         self.calcul_entry.setText(self.user_entry)
 
     def buttonminus_clicked(self):
+        self.user_entry = self.calcul_entry.text()
         did_signe_changed = False
 
         if self.user_entry == "":
@@ -190,6 +202,7 @@ class Calculatrice(QDialog):
         self.calcul_entry.setText(self.user_entry)
 
     def buttondot_clicked(self):
+        self.user_entry = self.calcul_entry.text()
         if self.user_entry[len(self.user_entry)-1] == "," or self.user_entry[len(self.user_entry)-1] == "." or self.user_entry[len(self.user_entry)-1] == "+" or self.user_entry[len(self.user_entry)-1] == "-":
             pass
         else:
