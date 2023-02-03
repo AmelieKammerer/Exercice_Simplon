@@ -30,3 +30,8 @@ Créer une calculatrice faisant l'addition et la soustraction de deux nombres
 OU
 
 - Télécharger l'exécutable avec ce lien et le lancer sur votre machine: https://drive.google.com/file/d/1AROhF6e2hjnNxGIESRgGQZmqrQlsFfW9/view?usp=share_link
+
+# Explication de trois principes de la POO (Programation Orientée Objet):
+- L'encapsulation: C'est le niveau d'accès donné aux variables et fonctions d'un objet. En public, les variables et fonction peuvent être lues et modifiées librement. En private elles sont accessibles uniquement dans le fichier où elles ont été crées. En protected, elles sont accessibles uniquement par l'objet et ses enfants.
+- L'héritage: On peu définir un objet enfant en se basant sur un objet existant. L'héritage est la capacité de l'objet enfant d'accéder aux variables et fonction de son parent.
+- Le Polymorphisme: C'est la possibilité pour des objets enfants de posséder des variables et fonctions qui leur sont propres en plus de celles de leur parent.
