@@ -233,14 +233,16 @@ class Calculatrice(QDialog):
     def buttoncorrect_clicked(self):
         self.user_entry = ""
         self.calcul_entry.setText(self.user_entry)
+        
 
     ## Traite la string entry et calcule #Repere
     def calculate(self):
-        pass
+        self.user_entry = self.calcul_entry.text()
+        
+        
         entry = self.calcul_entry.text()
         authorised_caracters = ["0", "1", "2" ,"3" ,"4" ,"5" ,"6" ,"7" ,"8" ,"9", ",", ".", "+", "-"]
         signes = []
-        syntax_error = False
 
         # Vérifie que calcul ne contient que des chiffres, ou les caractères suivants: ",", ".", "+", "-"
         for i in range(len(entry)):
@@ -250,33 +252,13 @@ class Calculatrice(QDialog):
                 self.user_entry = ""
                 self.calcul_entry.setText("")
                 return
-            else:
-                # Sauvegarde les signes du calcul
-                if entry[i] == "+" or entry[i] == "-":
-                    signes.append(entry[i])
-
-        # Modifie entry pour avoir la liste des nombres du calcul
-        entry = entry.replace('+', '|')    
-        entry = entry.replace('-', '|')          
-        entry = entry.replace(',', '.') 
-        entry = entry.split("|")
-
-        # Calcul
-        calcul = float(entry[0])
-        for i in range(len(signes)):
-            if signes[i] == "+":
-                calcul = calcul + float(entry[i+1])
-            if signes[i] == "-":
-                calcul = calcul - float(entry[i+1])
-        if calcul != 0:
-            if calcul/int(calcul) == 1:
-                calcul = int(calcul)
-        else:
-            calcul = int(calcul)
-
+            
         # Met à jour le champ avec le résultat
+        entry = entry.replace(',', '.')
+        calcul = eval(entry)
         self.calcul_entry.setText(str(calcul))
         self.user_entry = str(calcul)
+        
        
 
         
