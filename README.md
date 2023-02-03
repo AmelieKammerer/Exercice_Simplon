@@ -6,7 +6,8 @@ Créer une calculatrice faisant l'addition et la soustraction de deux nombres
 - 20h - Première version opérationnelle avec entrée clavier
 
 03-03-2023
-- 9h - tkinter étant graphiquement dépassé, l'interface graphique sera refait sous PyQt5
+- 9h  - tkinter étant graphiquement dépassé, l'interface graphique sera refait sous PyQt5
+- 14h - la calculatrice est fonctionnelle aussi bien avec une entrée clavier qu'en utilisant ses boutons.
 
 # Comment j'ai programmé cette calculatrice
 - J'ai appris à utiliser l'outil GitHub
