@@ -26,4 +26,5 @@ Créer une calculatrice faisant l'addition et la soustraction de deux nombres
 
 # Execution du programme:
 - Ouvrir le fichier python dans un IDE et executer le programme.
+OU
 - Télécharger l'exécutable avec ce lien et le lancer sur votre machine: https://drive.google.com/file/d/1AROhF6e2hjnNxGIESRgGQZmqrQlsFfW9/view?usp=share_link
