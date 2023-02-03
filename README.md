@@ -1,5 +1,6 @@
 # Exercice_Simplon
 Créer une calculatrice faisant l'addition et la soustraction de deux nombres
+
 02-02-2023  
 - 15h - Début de l'exercice
 - 20h - Première version opérationnelle avec entrée clavier
