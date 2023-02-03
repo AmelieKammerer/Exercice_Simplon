@@ -1,7 +1,11 @@
 # Exercice_Simplon
 Créer une calculatrice faisant l'addition et la soustraction de deux nombres
-02-02-2023  15h - Début de l'exercice
-            20h - Première version opérationnelle avec entrée clavier
+02-02-2023  
+- 15h - Début de l'exercice
+- 20h - Première version opérationnelle avec entrée clavier
+
+03-03-2023
+- 9h - tkinter étant graphiquement dépassé, l'interface graphique sera refait sous PyQt5
 
 # Comment j'ai programmé cette calculatrice
 - J'ai appris à utiliser l'outil GitHub
