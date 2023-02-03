@@ -24,6 +24,7 @@ class Calculatrice(QDialog):
         self.setLayout(main_layout)
 
         self.user_entry = ""
+        self.button_number = ""
 
     # Change le style de la fenêtre
     def changeStyle(self, styleName):
@@ -203,6 +204,8 @@ class Calculatrice(QDialog):
 
     def buttondot_clicked(self):
         self.user_entry = self.calcul_entry.text()
+        if self.user_entry == "":
+            return
         if self.user_entry[len(self.user_entry)-1] == "," or self.user_entry[len(self.user_entry)-1] == "." or self.user_entry[len(self.user_entry)-1] == "+" or self.user_entry[len(self.user_entry)-1] == "-":
             pass
         else:
