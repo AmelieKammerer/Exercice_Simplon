@@ -199,6 +199,11 @@ class Calculatrice(QDialog):
 
     def buttonequal_clicked(self):
         self.user_entry = self.calcul_entry.text()
+
+        if self.user_entry == "":
+            QMessageBox.about(self, "Attention !", "Le champ de saisie ne doit pas être vide.")
+            return
+
         if self.user_entry[len(self.user_entry)-1] == "," or self.user_entry[len(self.user_entry)-1] == "." or self.user_entry[len(self.user_entry)-1] == "+" or self.user_entry[len(self.user_entry)-1] == "+":
             self.user_entry = self.user_entry + "0"
             self.calcul_entry.setText(self.user_entry)
@@ -220,7 +225,7 @@ class Calculatrice(QDialog):
         for i in range(len(entry)):
 
             if entry[i] not in authorised_caracters:
-                QMessageBox.about(self, "Attention !", "Le champ de saisie ne doit contenir que des chiffres, points, virgules ou les signes + ou - ")
+                QMessageBox.about(self, "Attention !", "Le champ de saisie ne doit contenir que des chiffres, points, virgules ou les signes \"+\" ou \"-\" ")
                 self.calcul_entry.setText("")
                 return
             else:
@@ -258,79 +263,6 @@ if not calcul_app:
 fenetre_calcul = Calculatrice()
 fenetre_calcul.show()
 calcul_app.exec_()      
-
-
-
-
-
-''' 
-
-# Crée la fonction qui calcule
-def calculate():
-    entry = user_entry.get()
-    authorised_caracters = ["0", "1", "2" ,"3" ,"4" ,"5" ,"6" ,"7" ,"8" ,"9", ",", ".", "+", "-"]
-    signes = []
-    syntax_error = False
-
-    # Vérifie que calcul ne contient que des chiffres, ",", ".", "+", "-"
-    for i in range(len(entry)):
-
-        if entry[i] not in authorised_caracters:
-            messagebox.showinfo("Attention !", "Le champ de saisie ne doit contenir que des chiffres, points, virgules ou les signes + ou - ")
-            user_entry.set("")
-            return
-        else:
-
-            # On vérifie que le premier ou dernier caractère soit un caractère spécial ou si deux caracères spéciaux se suivent
-            if i == 0:
-                if authorised_caracters.index(entry[i]) > 9:
-                    syntax_error = True
-            if i < len(entry):
-                if authorised_caracters.index(entry[i]) > 9 and authorised_caracters.index(entry[i+1]) > 9:
-                    syntax_error = True
-            if i == len(entry):
-                if authorised_caracters.index(entry[i]) > 9 :
-                    syntax_error = True
-
-            # Sauvegarde les signes du calcul
-            if entry[i] == "+" or entry[i] == "-":
-                signes.append(entry[i])
-    
-    # Renvoie une erreur si il y a eu une erreur de syntaxe
-    if syntax_error == True:
-        messagebox.showinfo("Attention !", "Le champ de saisie ne doit ni commencer ni se terminer par un caractère spécial. Il ne faut pas non plus que deux caractères spéciaux se suivent.")
-        user_entry.set("")
-        return
-
-    # Modifie entry pour avoir la liste des nombres du calcul
-    entry = entry.replace('+', '|')    
-    entry = entry.replace('-', '|')          
-    entry = entry.replace(',', '.') 
-    entry = entry.split("|")
-
-    # Calcul
-    calcul = float(entry[0])
-    for i in range(len(signes)):
-        if signes[i] == "+":
-            calcul = calcul + float(entry[i+1])
-        if signes[i] == "-":
-            calcul = calcul - float(entry[i+1])
-
-    # Met à jour le champ avec le résultat et bouge le curseur à la fin du champ
-    user_entry.set(calcul)
-    calcul_entry.icursor(len(str(calcul)))
-    print(len(str(calcul)))
-
-# Crée le bouton "="
-calcul_button = Button(calcul_window, text = "=", command = calculate)
-calcul_button.pack()
-
-
-## Crée la fenêtre
-
-calcul_window.mainloop()
-'''
-
 
 
 
