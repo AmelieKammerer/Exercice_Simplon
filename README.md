@@ -10,7 +10,7 @@ Créer une calculatrice faisant l'addition et la soustraction de deux nombres
 - 14h - la calculatrice est fonctionnelle aussi bien avec une entrée clavier qu'en utilisant ses boutons. Recherche du potentiels bugs puis création d'un fichier executable
 - 15h - bugs fix. L'executable pesant 35Mo, github ne veut pas le récupérer, upload sur google drive.
 - 16h - explication de trois principes de la POO
-- 18h - Léger bug fix
+- 18h - Léger bug fix et optimisation
 
 # Comment j'ai programmé cette calculatrice
 - J'ai appris à utiliser l'outil GitHub
