@@ -204,9 +204,14 @@ class Calculatrice(QDialog):
             QMessageBox.about(self, "Attention !", "Le champ de saisie ne doit pas être vide.")
             return
 
-        if self.user_entry[len(self.user_entry)-1] == "," or self.user_entry[len(self.user_entry)-1] == "." or self.user_entry[len(self.user_entry)-1] == "+" or self.user_entry[len(self.user_entry)-1] == "+":
+        if self.user_entry[len(self.user_entry)-1] == "," or self.user_entry[len(self.user_entry)-1] == "." or self.user_entry[len(self.user_entry)-1] == "-" or self.user_entry[len(self.user_entry)-1] == "+":
             self.user_entry = self.user_entry + "0"
             self.calcul_entry.setText(self.user_entry)
+
+        if self.user_entry[len(self.user_entry)-1] == "-" or self.user_entry[0] == "+" or self.user_entry[0] == "-":
+            self.user_entry = "0" + self.user_entry
+            self.calcul_entry.setText(self.user_entry)
+
         self.calculate()
 
     def buttoncorrect_clicked(self):
@@ -226,6 +231,7 @@ class Calculatrice(QDialog):
 
             if entry[i] not in authorised_caracters:
                 QMessageBox.about(self, "Attention !", "Le champ de saisie ne doit contenir que des chiffres, points, virgules ou les signes \"+\" ou \"-\" ")
+                self.user_entry = ""
                 self.calcul_entry.setText("")
                 return
             else:
@@ -246,7 +252,10 @@ class Calculatrice(QDialog):
                 calcul = calcul + float(entry[i+1])
             if signes[i] == "-":
                 calcul = calcul - float(entry[i+1])
-        if calcul/int(calcul) == 1:
+        if calcul != 0:
+            if calcul/int(calcul) == 1:
+                calcul = int(calcul)
+        else:
             calcul = int(calcul)
 
         # Met à jour le champ avec le résultat
